@@ -10,3 +10,4 @@ RUN apt-get install proxysql
 
 ADD proxysql.cnf /etc/proxysql.cnf
 
+EXPOSE 6032 6033
