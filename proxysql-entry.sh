@@ -4,4 +4,4 @@ if [ -z "$MYSQL_HOSTNAME" ]; then
   exit 1
 fi
 
-/usr/bin/proxysql --initial -c /etc/proxysql.cnf
+/usr/bin/proxysql --initial -f -c /etc/proxysql.cnf
