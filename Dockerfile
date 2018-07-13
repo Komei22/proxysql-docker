@@ -11,3 +11,7 @@ RUN apt-get install proxysql
 ADD proxysql.cnf /etc/proxysql.cnf
 
 EXPOSE 6032 6033
+
+COPY proxysql-entry.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]
