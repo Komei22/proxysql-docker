@@ -10,8 +10,11 @@ RUN apt-get install proxysql
 
 ADD proxysql.cnf /etc/proxysql.cnf
 
-EXPOSE 6032 6033
+COPY set_mysql_info.sh /usr/bin/set_mysql_info.sh
+RUN chmod a+x /usr/bin/set_mysql_info.sh
 
 COPY proxysql-entry.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
+
+EXPOSE 6032 6033
