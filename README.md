@@ -9,9 +9,15 @@ docker build -t <container name> .
 docker run -it -d -p 6032:6032 -e MYSQL_HOSTNAME=<mysql hostname> <container name>
 ```
 
-## Environment variables
+## Environment variables for mysql
 - MYSQL_HOSTNAME
   - backend mysql hostname
+
+### Set mysql information
+```
+docker exec -it <container name> /usr/bin/set_mysql_info.sh
+```
+
 
 ## Proxysql remote admin connection
 
