@@ -6,12 +6,16 @@
 # build
 docker build -t <container name> .
 # run
-docker run -it -d -p 6032:6032 -e MYSQL_HOSTNAME=<mysql hostname> <container name>
+docker run -it -d -p 6032:6032 -e <environment variables> hostname> <container name>
 ```
 
 ## Environment variables for mysql
-- MYSQL_HOSTNAME
+- $MYSQL_HOSTNAME
   - backend mysql hostname
+- $MYSQL_USER
+  - mysql username
+- $MYSQL_USER_PASSWORD
+  - MYSQL_USER's password
 
 ### Set mysql information
 ```
