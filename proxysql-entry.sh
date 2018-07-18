@@ -16,7 +16,7 @@ fi
 
 /usr/bin/proxysql --initial -c /etc/proxysql.cnf
 
-sleep 1s
+sleep 1s  # wait running proxysql process
 
 /usr/bin/set_mysql_info.sh
 
