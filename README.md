@@ -1,5 +1,7 @@
 # proxysql-docker
 
+proxysql-docker collect statistics of a mysql databse.
+
 ## Build&Run
 
 ```
@@ -17,14 +19,8 @@ docker run -it -d -p 6032:6032 -e <environment variables> hostname> <container n
 - $MYSQL_USER_PASSWORD
   - MYSQL_USER's password
 
-### Set mysql information
-```
-docker exec -it <container name> /usr/bin/set_mysql_info.sh
-```
-
-
 ## Proxysql remote admin connection
 
 ```
-mysql -u remote_admin -premote_admin -h 127.0.0.1 -P6032 --prompt='Admin> '
+mysql -uremote_admin -premote_admin -h 127.0.0.1 -P6032 --prompt='Admin> '
 ```
