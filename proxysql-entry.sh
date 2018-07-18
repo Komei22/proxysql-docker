@@ -14,4 +14,12 @@ if [ -z "$MYSQL_USER_PASSWORD" ]; then
   exit 1
 fi
 
-/usr/bin/proxysql --initial -f -c /etc/proxysql.cnf
+/usr/bin/proxysql --initial -c /etc/proxysql.cnf
+
+sleep 1s
+
+/usr/bin/set_mysql_info.sh
+
+ps -lC proxysql | awk 'NR>1 {print $4}' | xargs kill -15
+
+/usr/bin/proxysql -f -c /etc/proxysql.cnf
