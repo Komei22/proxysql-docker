@@ -1,6 +1,6 @@
-# proxysql-docker
+# simple-roxysql-docker
 
-proxysql-docker collect statistics of a mysql databse.
+simple-proxysql-docker collect statistics of a mysql databse.
 
 ## Build&Run
 
